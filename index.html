@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -273,7 +273,7 @@
               
                 
                 <a class="post-title-link" href="/2017/04/16/jQuery选择器/" itemprop="url">
-                  Unbenannt
+                  Untitled
                 </a>
               
             
@@ -287,7 +287,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-16T22:47:59+08:00">
                 2017-04-16
@@ -399,9 +399,11 @@ a {
 <pre><code>* {
     font-size:14px;
 }
-</code></pre><p>参考：<a href="https://segmentfault.com/a/1190000003088878#articleHeader5" target="_blank" rel="external">https://segmentfault.com/a/1190000003088878#articleHeader5</a><br>##jQuery选择器<br>###1.基本选择器</p>
+</code></pre><p>参考：<a href="https://segmentfault.com/a/1190000003088878#articleHeader5" target="_blank" rel="external">https://segmentfault.com/a/1190000003088878#articleHeader5</a></p>
 </li>
 </ul>
+<p>##jQuery选择器</p>
+<p>###1.基本选择器</p>
 <table>
 <thead>
 <tr>
@@ -456,25 +458,25 @@ a {
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">\$(“ancestor descendant”)</td>
+<td style="text-align:center">$(“ancestor descendant”)</td>
 <td style="text-align:center">选取ancestor元素里的所有descendant（后代）元素</td>
 <td style="text-align:center">集合元素</td>
 <td style="text-align:center">$(“div span”)选取&lt;div&gt;里的所有&lt;span&gt;元素</td>
 </tr>
 <tr>
-<td style="text-align:center">\$(“parent&gt;child”)</td>
+<td style="text-align:center">$(“parent&gt;child”)</td>
 <td style="text-align:center">选取parent元素下的child（子）元素，与$(“ancestor descendant”)有区别，$(“ancestor descendant”)选择的是后代元素</td>
 <td style="text-align:center">集合元素</td>
 <td style="text-align:center">$(“div&gt;span”)选取&lt;div&gt;元素下元素名是&lt;span&gt;的子元素</td>
 </tr>
 <tr>
-<td style="text-align:center">\$(“prev+next”)</td>
+<td style="text-align:center">$(“prev+next”)</td>
 <td style="text-align:center">选取<em>紧接</em>在prev元素<em>后</em>的next元素</td>
 <td style="text-align:center">集合元素</td>
 <td style="text-align:center">$(“.one+div”)选取class为one的下一个&lt;div&gt;同辈元素</td>
 </tr>
 <tr>
-<td style="text-align:center">\$(“prev~siblings”)</td>
+<td style="text-align:center">$(“prev~siblings”)</td>
 <td style="text-align:center">选取prev元素<em>之后所有同辈</em>的siblings</td>
 <td style="text-align:center">集合元素</td>
 <td style="text-align:center">$(“#two~div”)选取id为two的元素后面的所有&lt;div&gt;同辈元素</td>
@@ -484,8 +486,10 @@ a {
 <ul>
 <li>可以使用next()方法来代替$(“prev+next”)选择器，$(“.one+div”);等价于$(“.one”).next(“div”);；</li>
 <li>可以使用nextAll()方法代替$(“prev~siblings”)选择器，$(“#two~div”);等价于$(“#two”).nextAll(“div”);；</li>
-<li>siblings()方法，$(“#prev”).siblings(“div”);选取#prev<em>所有同辈</em>的&lt;div&gt;元素。<br>###3.过滤选择器<br>####（1）基本过滤选择器</li>
+<li>siblings()方法，$(“#prev”).siblings(“div”);选取#prev<em>所有同辈</em>的&lt;div&gt;元素。</li>
 </ul>
+<p>###3.过滤选择器</p>
+<p>####（1）基本过滤选择器</p>
 <table>
 <thead>
 <tr>
@@ -923,7 +927,7 @@ a {
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-13T22:31:21+08:00">
                 2017-01-13
@@ -1049,7 +1053,7 @@ a {
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -1103,7 +1107,7 @@ a {
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
