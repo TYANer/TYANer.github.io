@@ -1,0 +1,802 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="节点表示网络中的一个连接点，每个节点都是一个对象
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Shopping list&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM">
+<meta property="og:url" content="http://yoursite.com/2017/04/23/DOM/index.html">
+<meta property="og:site_name" content="blog of TangYan">
+<meta property="og:description" content="节点表示网络中的一个连接点，每个节点都是一个对象
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Shopping list&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;b">
+<meta property="og:updated_time" content="2017-04-23T12:54:01.009Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DOM">
+<meta name="twitter:description" content="节点表示网络中的一个连接点，每个节点都是一个对象
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Shopping list&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;b">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/23/DOM/"/>
+
+
+
+
+
+  <title> DOM | blog of TangYan </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">blog of TangYan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TangYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of TangYan">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                DOM
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-23T20:26:24+08:00">
+                2017-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><p>表示网络中的一个连接点，每个节点都是一个对象</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Shopping list&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;What to buy&lt;/h1&gt;
+    &lt;p title=&quot;a gentle remainder&quot;&gt;Don&apos;t forget to buy this stuff.&lt;/p&gt;
+    &lt;ul id=&quot;purchases&quot;&gt;
+        &lt;li&gt;A tin of beans&lt;/li&gt;
+        &lt;li class=&quot;sale&quot;&gt;Cheese&lt;/li&gt;
+        &lt;li class=&quot;sale important today&quot;&gt;Milk&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="一、元素节点（element-node）–DOM的原子"><a href="#一、元素节点（element-node）–DOM的原子" class="headerlink" title="一、元素节点（element node）–DOM的原子"></a>一、元素节点（element node）–DOM的原子</h3><ol>
+<li>标签的名字就是元素的名字</li>
+<li><code>&lt;html&gt;</code>元素是唯一没有被包含在其他元素里的元素，是节点树的根元素<h3 id="二、文本节点（text-node）–包含文本的节点"><a href="#二、文本节点（text-node）–包含文本的节点" class="headerlink" title="二、文本节点（text node）–包含文本的节点"></a>二、文本节点（text node）–包含文本的节点</h3>在XHTML文档里，文本节点总是被包含在元素节点的内部<h3 id="三、属性节点（attribute-node）–用于对元素做出更具体的描述"><a href="#三、属性节点（attribute-node）–用于对元素做出更具体的描述" class="headerlink" title="三、属性节点（attribute node）–用于对元素做出更具体的描述"></a>三、属性节点（attribute node）–用于对元素做出更具体的描述</h3>属性节点总是被包含在元素节点中<br><code>&lt;p title=&quot;a gentle remainder&quot;&gt;Don&#39;t forget to buy this stuff.&lt;/p&gt;</code>中<br><code>&lt;p&gt;</code>是元素节点，<code>Don&#39;t forget to buy this stuff.</code>是文本节点，<code>title=&quot;a gentle remainder&quot;</code>是属性节点<h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><h3 id="一、getElementById"><a href="#一、getElementById" class="headerlink" title="一、getElementById"></a>一、getElementById</h3>返回一个有着与给定id属性值的元素节点对应的对象</li>
+</ol>
+<ul>
+<li>语法：<code>document.getElementById(&quot;id&quot;)//单引号或双引号都可以</code></li>
+<li><p>例子：<code>document.getElementById(&quot;purchases&quot;)</code></p>
+<h3 id="二、getElementsByTagName"><a href="#二、getElementsByTagName" class="headerlink" title="二、getElementsByTagName"></a>二、getElementsByTagName</h3><p>返回一个对象数组</p>
+</li>
+<li><p>语法：<code>element.getElementsByTagName(&quot;tag&quot;)</code></p>
+</li>
+<li>例子：<code>document.getElementsByTagName(&quot;li&quot;)</code></li>
+<li>getElementsByTagName允许把一个通配符（*）当作参数</li>
+<li><code>alert(document.getElementsByTagName(&quot;*&quot;).length;//弹出文档中元素节点的总数</code></li>
+</ul>
+<p>getElementById与gteElementsByTagName结合使用：</p>
+<pre><code>var shopping = document.getElementById(&quot;purchases&quot;);
+var items = shopping.getElementsByTagName(&quot;li&quot;);
+for (var i = 0;i &lt; items.length;i++) {
+    alert(typeof items[i]);
+}
+</code></pre><h3 id="三、getElementsByClassName"><a href="#三、getElementsByClassName" class="headerlink" title="三、getElementsByClassName"></a>三、getElementsByClassName</h3><p>返回一个具有相同类名的元素的数组</p>
+<p><strong>由于这个方法还比较新，只有较新的浏览器才支持它，某些DOM实现中可能还没有，使用时要小心</strong></p>
+<ul>
+<li>语法：<code>getElementsByClassName(class)</code></li>
+<li>例子：<code>document.getElementsByClassName(&quot;sale&quot;)</code></li>
+</ul>
+<p><code>alert(document.getElementsByClassName(&quot;important sale&quot;).length); //1</code></p>
+<ol>
+<li>可以查找带有多个类名的元素，只需指定多个类名，用空格分隔；</li>
+<li>类名的实际顺序不重要</li>
+<li>元素还可以带有更多的类名</li>
+</ol>
+<p>兼容新老浏览器的函数：</p>
+<pre><code>//不支持多个类名
+function getElementsByClassName(node,className) {
+//node表示DOM中树的搜索起点
+    if (node.getElementsByClassName) {
+        //使用现有方法
+        return node.getElementsByClassName(className);
+    }
+    else {
+        var results = new Array();
+        var elems = node.getElementsByTagName(&quot;*&quot;);
+        for(var i = 0, i &lt; elems.length; i++){
+            if (elems[i].className.indexOf(className) != -1) {
+                results[results.length] = elems[i];
+            }
+        }
+        return results;
+    }
+}
+</code></pre><p>例子：</p>
+<pre><code>var shopping = document.getElementById(&quot;purchases&quot;);
+var sale = getELementsByClassName(shopping,&quot;sale&quot;);//获取购物列表
+</code></pre><h2 id="获取和设置属性"><a href="#获取和设置属性" class="headerlink" title="获取和设置属性"></a>获取和设置属性</h2><h3 id="一、getAttribute–获取属性节点"><a href="#一、getAttribute–获取属性节点" class="headerlink" title="一、getAttribute–获取属性节点"></a>一、getAttribute–获取属性节点</h3><p>getAttribute方法不属于document对象，不能通过document对象调用，只能通过元素节点对象调用</p>
+<ul>
+<li>方法：<code>object.getAttribute(attribute)</code></li>
+<li><p>例子：</p>
+<pre><code>var paras = document.getElementsByTagName(&quot;p&quot;);
+for(var i = 0;i &lt; paras.length;i++) {
+    var title_text = paras[i].getAttribute(&quot;title&quot;);
+    if (title_text) {
+    //if(something)与if(something != null)完全等价，但前者更简洁
+        alert(title_text);
+    }
+}        
+</code></pre></li>
+</ul>
+<h3 id="二、setAttribute–设置属性节点的值"><a href="#二、setAttribute–设置属性节点的值" class="headerlink" title="二、setAttribute–设置属性节点的值"></a>二、setAttribute–设置属性节点的值</h3><p>和getAttribute一样，只能用于元素节点</p>
+<ul>
+<li>方法：<code>object.setAttribute(attribute,value)</code></li>
+<li><p>例子：</p>
+<pre><code>var shopping = document.getElementById(&quot;purchases&quot;);
+alert(shopping.getAttribute(&quot;title&quot;));//弹出空白或&quot;null&quot;
+shopping.setAttribute(&quot;title&quot;,&quot;a list of goods&quot;);
+alert(shopping.getAttribute(&quot;title&quot;));//弹出&quot;a list of goods&quot;
+
+var paras =  document.getElementsByTagName(&quot;p&quot;);
+for(var i = 0;i &lt; paras.length;i++) {
+    var title_text = paras[i].getAttribute(&quot;title&quot;);
+    if (title_text) {
+        paras.setAttribute(&quot;title&quot;,&quot;brand new title text&quot;);
+        alert(paras[i].getAttribute(&quot;title&quot;));
+    }
+}
+</code></pre></li>
+</ul>
+<p>总结：</p>
+<ol>
+<li>当要修改的属性不存在时，先创建这个属性，然后设置它的值；当元素节点上本来就有这个属性时，设置的值会覆盖原有值</li>
+<li>setAttribute做出的修改不会反映在文档本身的源代码里（DOM的工作模式：先加载文档的静态内容，再动态刷新，动态刷新不会影响文档的静态内容，即对页面内容进行刷新却不需要在浏览器里刷新页面）<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><h3 id="一、childNodes属性–用于获取任何一个元素的所有子元素"><a href="#一、childNodes属性–用于获取任何一个元素的所有子元素" class="headerlink" title="一、childNodes属性–用于获取任何一个元素的所有子元素"></a>一、childNodes属性–用于获取任何一个元素的所有子元素</h3>返回的数组包含所有类型的节点，而不仅是元素节点，其中甚至包括空格和换行符等</li>
+</ol>
+<ul>
+<li>语法：<code>element.childNodes</code></li>
+<li><p>例子：</p>
+<pre><code>function countBodyChildren() {
+    var body_element = document.getElementsByTagName(&quot;body&quot;)[0];
+    alert(body_element.childNodes.length);
+}//显示body元素的子元素的总个数
+</code></pre><h3 id="二、nodeType属性"><a href="#二、nodeType属性" class="headerlink" title="二、nodeType属性"></a>二、nodeType属性</h3><p>每一个节点都有nodeType属性</p>
+</li>
+<li><p>语法：<code>node.nodeType</code></p>
+</li>
+<li><p>例子：</p>
+<pre><code>var body_element = document.getElementsByTagName(&quot;body&quot;)[0];
+alert(body_element.nodeType);`
+</code></pre></li>
+<li>nodeType属性总共有12种可取值，仅3中具有实用价值<ol>
+<li><strong>元素节点</strong>的nodeType属性值是<strong>1</strong></li>
+<li><strong>属性节点</strong>的nodeType属性值是<strong>2</strong></li>
+<li><strong>文本节点</strong>的nodeType属性值是<strong>3</strong></li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/16/jQuery选择器/" rel="next" title="jQuery选择器">
+                <i class="fa fa-chevron-left"></i> jQuery选择器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="TangYan" />
+          <p class="site-author-name" itemprop="name">TangYan</p>
+           
+              <p class="site-description motion-element" itemprop="description">欲戴王冠，必承其重！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#节点"><span class="nav-number">1.</span> <span class="nav-text">节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、元素节点（element-node）–DOM的原子"><span class="nav-number">1.1.</span> <span class="nav-text">一、元素节点（element node）–DOM的原子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、文本节点（text-node）–包含文本的节点"><span class="nav-number">1.2.</span> <span class="nav-text">二、文本节点（text node）–包含文本的节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、属性节点（attribute-node）–用于对元素做出更具体的描述"><span class="nav-number">1.3.</span> <span class="nav-text">三、属性节点（attribute node）–用于对元素做出更具体的描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取元素"><span class="nav-number">2.</span> <span class="nav-text">获取元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、getElementById"><span class="nav-number">2.1.</span> <span class="nav-text">一、getElementById</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、getElementsByTagName"><span class="nav-number">2.2.</span> <span class="nav-text">二、getElementsByTagName</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、getElementsByClassName"><span class="nav-number">2.3.</span> <span class="nav-text">三、getElementsByClassName</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取和设置属性"><span class="nav-number">3.</span> <span class="nav-text">获取和设置属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、getAttribute–获取属性节点"><span class="nav-number">3.1.</span> <span class="nav-text">一、getAttribute–获取属性节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、setAttribute–设置属性节点的值"><span class="nav-number">3.2.</span> <span class="nav-text">二、setAttribute–设置属性节点的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例"><span class="nav-number">4.</span> <span class="nav-text">案例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、childNodes属性–用于获取任何一个元素的所有子元素"><span class="nav-number">4.1.</span> <span class="nav-text">一、childNodes属性–用于获取任何一个元素的所有子元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、nodeType属性"><span class="nav-number">4.2.</span> <span class="nav-text">二、nodeType属性</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TangYan</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

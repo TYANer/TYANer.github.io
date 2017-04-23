@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -89,12 +89,12 @@
 
 <meta name="description" content="欲戴王冠，必承其重！">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="blog of TangYan">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="blog of TangYan">
 <meta property="og:description" content="欲戴王冠，必承其重！">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="blog of TangYan">
 <meta name="twitter:description" content="欲戴王冠，必承其重！">
 
 
@@ -109,7 +109,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -129,10 +129,10 @@
 
 
 
-  <title> Hexo </title>
+  <title> blog of TangYan </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -167,7 +167,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">blog of TangYan</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -217,7 +217,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/16/jQuery选择器/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/DOM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TangYan">
@@ -259,7 +259,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="blog of TangYan">
     </span>
 
     
@@ -272,8 +272,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/16/jQuery选择器/" itemprop="url">
-                  Unbenannt
+                <a class="post-title-link" href="/2017/04/23/DOM/" itemprop="url">
+                  DOM
                 </a>
               
             
@@ -287,9 +287,258 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-16T22:47:59+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-23T20:26:24+08:00">
+                2017-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><p>表示网络中的一个连接点，每个节点都是一个对象</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Shopping list&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;What to buy&lt;/h1&gt;
+    &lt;p title=&quot;a gentle remainder&quot;&gt;Don&apos;t forget to buy this stuff.&lt;/p&gt;
+    &lt;ul id=&quot;purchases&quot;&gt;
+        &lt;li&gt;A tin of beans&lt;/li&gt;
+        &lt;li class=&quot;sale&quot;&gt;Cheese&lt;/li&gt;
+        &lt;li class=&quot;sale important today&quot;&gt;Milk&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="一、元素节点（element-node）–DOM的原子"><a href="#一、元素节点（element-node）–DOM的原子" class="headerlink" title="一、元素节点（element node）–DOM的原子"></a>一、元素节点（element node）–DOM的原子</h3><ol>
+<li>标签的名字就是元素的名字</li>
+<li><code>&lt;html&gt;</code>元素是唯一没有被包含在其他元素里的元素，是节点树的根元素<h3 id="二、文本节点（text-node）–包含文本的节点"><a href="#二、文本节点（text-node）–包含文本的节点" class="headerlink" title="二、文本节点（text node）–包含文本的节点"></a>二、文本节点（text node）–包含文本的节点</h3>在XHTML文档里，文本节点总是被包含在元素节点的内部<h3 id="三、属性节点（attribute-node）–用于对元素做出更具体的描述"><a href="#三、属性节点（attribute-node）–用于对元素做出更具体的描述" class="headerlink" title="三、属性节点（attribute node）–用于对元素做出更具体的描述"></a>三、属性节点（attribute node）–用于对元素做出更具体的描述</h3>属性节点总是被包含在元素节点中<br><code>&lt;p title=&quot;a gentle remainder&quot;&gt;Don&#39;t forget to buy this stuff.&lt;/p&gt;</code>中<br><code>&lt;p&gt;</code>是元素节点，<code>Don&#39;t forget to buy this stuff.</code>是文本节点，<code>title=&quot;a gentle remainder&quot;</code>是属性节点<h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><h3 id="一、getElementById"><a href="#一、getElementById" class="headerlink" title="一、getElementById"></a>一、getElementById</h3>返回一个有着与给定id属性值的元素节点对应的对象</li>
+</ol>
+<ul>
+<li>语法：<code>document.getElementById(&quot;id&quot;)//单引号或双引号都可以</code></li>
+<li><p>例子：<code>document.getElementById(&quot;purchases&quot;)</code></p>
+<h3 id="二、getElementsByTagName"><a href="#二、getElementsByTagName" class="headerlink" title="二、getElementsByTagName"></a>二、getElementsByTagName</h3><p>返回一个对象数组</p>
+</li>
+<li><p>语法：<code>element.getElementsByTagName(&quot;tag&quot;)</code></p>
+</li>
+<li>例子：<code>document.getElementsByTagName(&quot;li&quot;)</code></li>
+<li>getElementsByTagName允许把一个通配符（*）当作参数</li>
+<li><code>alert(document.getElementsByTagName(&quot;*&quot;).length;//弹出文档中元素节点的总数</code></li>
+</ul>
+<p>getElementById与gteElementsByTagName结合使用：</p>
+<pre><code>var shopping = document.getElementById(&quot;purchases&quot;);
+var items = shopping.getElementsByTagName(&quot;li&quot;);
+for (var i = 0;i &lt; items.length;i++) {
+    alert(typeof items[i]);
+}
+</code></pre><h3 id="三、getElementsByClassName"><a href="#三、getElementsByClassName" class="headerlink" title="三、getElementsByClassName"></a>三、getElementsByClassName</h3><p>返回一个具有相同类名的元素的数组</p>
+<p><strong>由于这个方法还比较新，只有较新的浏览器才支持它，某些DOM实现中可能还没有，使用时要小心</strong></p>
+<ul>
+<li>语法：<code>getElementsByClassName(class)</code></li>
+<li>例子：<code>document.getElementsByClassName(&quot;sale&quot;)</code></li>
+</ul>
+<p><code>alert(document.getElementsByClassName(&quot;important sale&quot;).length); //1</code></p>
+<ol>
+<li>可以查找带有多个类名的元素，只需指定多个类名，用空格分隔；</li>
+<li>类名的实际顺序不重要</li>
+<li>元素还可以带有更多的类名</li>
+</ol>
+<p>兼容新老浏览器的函数：</p>
+<pre><code>//不支持多个类名
+function getElementsByClassName(node,className) {
+//node表示DOM中树的搜索起点
+    if (node.getElementsByClassName) {
+        //使用现有方法
+        return node.getElementsByClassName(className);
+    }
+    else {
+        var results = new Array();
+        var elems = node.getElementsByTagName(&quot;*&quot;);
+        for(var i = 0, i &lt; elems.length; i++){
+            if (elems[i].className.indexOf(className) != -1) {
+                results[results.length] = elems[i];
+            }
+        }
+        return results;
+    }
+}
+</code></pre><p>例子：</p>
+<pre><code>var shopping = document.getElementById(&quot;purchases&quot;);
+var sale = getELementsByClassName(shopping,&quot;sale&quot;);//获取购物列表
+</code></pre><h2 id="获取和设置属性"><a href="#获取和设置属性" class="headerlink" title="获取和设置属性"></a>获取和设置属性</h2><h3 id="一、getAttribute–获取属性节点"><a href="#一、getAttribute–获取属性节点" class="headerlink" title="一、getAttribute–获取属性节点"></a>一、getAttribute–获取属性节点</h3><p>getAttribute方法不属于document对象，不能通过document对象调用，只能通过元素节点对象调用</p>
+<ul>
+<li>方法：<code>object.getAttribute(attribute)</code></li>
+<li><p>例子：</p>
+<pre><code>var paras = document.getElementsByTagName(&quot;p&quot;);
+for(var i = 0;i &lt; paras.length;i++) {
+    var title_text = paras[i].getAttribute(&quot;title&quot;);
+    if (title_text) {
+    //if(something)与if(something != null)完全等价，但前者更简洁
+        alert(title_text);
+    }
+}        
+</code></pre></li>
+</ul>
+<h3 id="二、setAttribute–设置属性节点的值"><a href="#二、setAttribute–设置属性节点的值" class="headerlink" title="二、setAttribute–设置属性节点的值"></a>二、setAttribute–设置属性节点的值</h3><p>和getAttribute一样，只能用于元素节点</p>
+<ul>
+<li>方法：<code>object.setAttribute(attribute,value)</code></li>
+<li><p>例子：</p>
+<pre><code>var shopping = document.getElementById(&quot;purchases&quot;);
+alert(shopping.getAttribute(&quot;title&quot;));//弹出空白或&quot;null&quot;
+shopping.setAttribute(&quot;title&quot;,&quot;a list of goods&quot;);
+alert(shopping.getAttribute(&quot;title&quot;));//弹出&quot;a list of goods&quot;
+
+var paras =  document.getElementsByTagName(&quot;p&quot;);
+for(var i = 0;i &lt; paras.length;i++) {
+    var title_text = paras[i].getAttribute(&quot;title&quot;);
+    if (title_text) {
+        paras.setAttribute(&quot;title&quot;,&quot;brand new title text&quot;);
+        alert(paras[i].getAttribute(&quot;title&quot;));
+    }
+}
+</code></pre></li>
+</ul>
+<p>总结：</p>
+<ol>
+<li>当要修改的属性不存在时，先创建这个属性，然后设置它的值；当元素节点上本来就有这个属性时，设置的值会覆盖原有值</li>
+<li>setAttribute做出的修改不会反映在文档本身的源代码里（DOM的工作模式：先加载文档的静态内容，再动态刷新，动态刷新不会影响文档的静态内容，即对页面内容进行刷新却不需要在浏览器里刷新页面）<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><h3 id="一、childNodes属性–用于获取任何一个元素的所有子元素"><a href="#一、childNodes属性–用于获取任何一个元素的所有子元素" class="headerlink" title="一、childNodes属性–用于获取任何一个元素的所有子元素"></a>一、childNodes属性–用于获取任何一个元素的所有子元素</h3>返回的数组包含所有类型的节点，而不仅是元素节点，其中甚至包括空格和换行符等</li>
+</ol>
+<ul>
+<li>语法：<code>element.childNodes</code></li>
+<li><p>例子：</p>
+<pre><code>function countBodyChildren() {
+    var body_element = document.getElementsByTagName(&quot;body&quot;)[0];
+    alert(body_element.childNodes.length);
+}//显示body元素的子元素的总个数
+</code></pre><h3 id="二、nodeType属性"><a href="#二、nodeType属性" class="headerlink" title="二、nodeType属性"></a>二、nodeType属性</h3><p>每一个节点都有nodeType属性</p>
+</li>
+<li><p>语法：<code>node.nodeType</code></p>
+</li>
+<li><p>例子：</p>
+<pre><code>var body_element = document.getElementsByTagName(&quot;body&quot;)[0];
+alert(body_element.nodeType);`
+</code></pre></li>
+<li>nodeType属性总共有12种可取值，仅3中具有实用价值<ol>
+<li><strong>元素节点</strong>的nodeType属性值是<strong>1</strong></li>
+<li><strong>属性节点</strong>的nodeType属性值是<strong>2</strong></li>
+<li><strong>文本节点</strong>的nodeType属性值是<strong>3</strong></li>
+</ol>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/16/jQuery选择器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TangYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of TangYan">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/16/jQuery选择器/" itemprop="url">
+                  jQuery选择器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-16T22:47:59+08:00">
                 2017-04-16
               </time>
             
@@ -327,8 +576,7 @@
       
         
           
-            <h1 id="jQuery选择器"><a href="#jQuery选择器" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h1><hr>
-<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><h3 id="1-标签选择器（以文档元素作为选择符）"><a href="#1-标签选择器（以文档元素作为选择符）" class="headerlink" title="1.标签选择器（以文档元素作为选择符）"></a>1.标签选择器（以文档元素作为选择符）</h3><ul>
+            <h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><h3 id="1-标签选择器（以文档元素作为选择符）"><a href="#1-标签选择器（以文档元素作为选择符）" class="headerlink" title="1.标签选择器（以文档元素作为选择符）"></a>1.标签选择器（以文档元素作为选择符）</h3><ul>
 <li><p>语法：</p>
 <pre><code>E {
     CSS规则
@@ -396,7 +644,11 @@ a {
 </code></pre><p>参考：<a href="https://segmentfault.com/a/1190000003088878#articleHeader5" target="_blank" rel="external">https://segmentfault.com/a/1190000003088878#articleHeader5</a></p>
 </li>
 </ul>
-<h2 id="jQuery选择器-1"><a href="#jQuery选择器-1" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h2><h3 id="1-基本选择器"><a href="#1-基本选择器" class="headerlink" title="1.基本选择器"></a>1.基本选择器</h3><table>
+<h2 id="jQuery选择器"><a href="#jQuery选择器" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h2><ol>
+<li>jQuery 中所有选择器都以美元符号开头：$()。</li>
+<li></li>
+</ol>
+<h3 id="1-基本选择器"><a href="#1-基本选择器" class="headerlink" title="1.基本选择器"></a>1.基本选择器</h3><table>
 <thead>
 <tr>
 <th style="text-align:center">选择器</th>
@@ -422,7 +674,7 @@ a {
 <td style="text-align:center">element</td>
 <td style="text-align:center">根据给定的元素名匹配元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“p”)选取所有的&lt;p&gt;元素</td>
+<td style="text-align:center">$(“p”)选取所有的\<p>元素</p></td>
 </tr>
 <tr>
 <td style="text-align:center">*</td>
@@ -434,7 +686,7 @@ a {
 <td style="text-align:center">selector1,selector2,…,selectorN</td>
 <td style="text-align:center">将每一个选择器匹配到的元素合并后一起返回</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div,span,p.myClass”)选取所有&lt;div&gt;，&lt;span&gt;和拥有class为myClass的&lt;p&gt;标签的一组元素</td>
+<td style="text-align:center">$(“div,span,p.myClass”)选取所有\<div>，\<span>和拥有class为myClass的\<p>标签的一组元素</p></span></div></td>
 </tr>
 </tbody>
 </table>
@@ -453,32 +705,32 @@ a {
 <td style="text-align:center">$(“ancestor descendant”)</td>
 <td style="text-align:center">选取ancestor元素里的所有descendant（后代）元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div span”)选取&lt;div&gt;里的所有&lt;span&gt;元素</td>
+<td style="text-align:center">$(“div span”)选取\<div>里的所有\<span>元素</span></div></td>
 </tr>
 <tr>
 <td style="text-align:center">$(“parent&gt;child”)</td>
 <td style="text-align:center">选取parent元素下的child（子）元素，与$(“ancestor descendant”)有区别，$(“ancestor descendant”)选择的是后代元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div&gt;span”)选取&lt;div&gt;元素下元素名是&lt;span&gt;的子元素</td>
+<td style="text-align:center">$(“div&gt;span”)选取\<div>元素下元素名是\<span>的子元素</span></div></td>
 </tr>
 <tr>
 <td style="text-align:center">$(“prev+next”)</td>
 <td style="text-align:center">选取<em>紧接</em>在prev元素<em>后</em>的next元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“.one+div”)选取class为one的下一个&lt;div&gt;同辈元素</td>
+<td style="text-align:center">$(“.one+div”)选取class为one的下一个\<div>同辈元素</div></td>
 </tr>
 <tr>
 <td style="text-align:center">$(“prev~siblings”)</td>
 <td style="text-align:center">选取prev元素<em>之后所有同辈</em>的siblings</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“#two~div”)选取id为two的元素后面的所有&lt;div&gt;同辈元素</td>
+<td style="text-align:center">$(“#two~div”)选取id为two的元素后面的所有\<div>同辈元素</div></td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>可以使用next()方法来代替$(“prev+next”)选择器，$(“.one+div”);等价于$(“.one”).next(“div”);；</li>
 <li>可以使用nextAll()方法代替$(“prev~siblings”)选择器，$(“#two~div”);等价于$(“#two”).nextAll(“div”);；</li>
-<li>siblings()方法，$(“#prev”).siblings(“div”);选取#prev<em>所有同辈</em>的&lt;div&gt;元素。</li>
+<li>siblings()方法，$(“#prev”).siblings(“div”);选取#prev<em>所有同辈</em>的\<div>元素。</div></li>
 </ul>
 <h3 id="3-过滤选择器"><a href="#3-过滤选择器" class="headerlink" title="3.过滤选择器"></a>3.过滤选择器</h3><h4 id="（1）基本过滤选择器"><a href="#（1）基本过滤选择器" class="headerlink" title="（1）基本过滤选择器"></a>（1）基本过滤选择器</h4><table>
 <thead>
@@ -494,25 +746,25 @@ a {
 <td style="text-align:center">:first</td>
 <td style="text-align:center">选取第一个元素</td>
 <td style="text-align:center">单个元素</td>
-<td style="text-align:center">$(“p:first”)选取第一个&lt;p&gt;元素</td>
+<td style="text-align:center">$(“p:first”)选取第一个\<p>元素</p></td>
 </tr>
 <tr>
 <td style="text-align:center">:last</td>
 <td style="text-align:center">选取最后一个元素</td>
 <td style="text-align:center">单个元素</td>
-<td style="text-align:center">$(“p:last”)选取最后一个&lt;p&gt;元素</td>
+<td style="text-align:center">$(“p:last”)选取最后一个\<p>元素</p></td>
 </tr>
 <tr>
 <td style="text-align:center">:even</td>
 <td style="text-align:center">选取索引是偶数的所有元素，索引从0开始</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“tr:even”)所有索引是偶数的&lt;tr&gt;元素</td>
+<td style="text-align:center">$(“tr:even”)所有索引是偶数的\</td></tr><tr>元素
 </tr>
 <tr>
 <td style="text-align:center">:odd</td>
 <td style="text-align:center">选取索引是奇数的所有元素，索引从0开始</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“tr:odd”)所有索引是奇数的&lt;tr&gt;元素</td>
+<td style="text-align:center">$(“tr:odd”)所有索引是奇数的\</td></tr><tr>元素
 </tr>
 <tr>
 <td style="text-align:center">:eq(index)</td>
@@ -536,19 +788,19 @@ a {
 <td style="text-align:center">:not(selector)</td>
 <td style="text-align:center">选取所有与给定选择器不匹配的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“input:not(:empty)”)选取所有不为空的&lt;input&gt;元素</td>
+<td style="text-align:center">$(“input:not(:empty)”)选取所有不为空的\<input>元素</td>
 </tr>
 <tr>
 <td style="text-align:center">:header</td>
-<td style="text-align:center">选取所有的标题元素&lt;hx&gt;</td>
+<td style="text-align:center">选取所有的标题元素\<hx></hx></td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:header”)    选取所有标题元素&lt;h1&gt; - &lt;h6&gt;</td>
+<td style="text-align:center">$(“:header”)    选取所有标题元素\<h1> - \<h6></h6></h1></td>
 </tr>
 <tr>
 <td style="text-align:center">:animated</td>
 <td style="text-align:center">选取当前正在执行动画的所有元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div:animated”)选取正在执行动画的所有&lt;div&gt;元素</td>
+<td style="text-align:center">$(“div:animated”)选取正在执行动画的所有\<div>元素</div></td>
 </tr>
 <tr>
 <td style="text-align:center">:focus</td>
@@ -584,13 +836,13 @@ a {
 <td style="text-align:center">:has(selector)</td>
 <td style="text-align:center">选取含有选择器所匹配的元素的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div:has(p)”)选取含有&lt;p&gt;元素的&lt;div&gt;元素</td>
+<td style="text-align:center">$(“div:has(p)”)选取含有\<p>元素的\<div>元素</div></p></td>
 </tr>
 <tr>
 <td style="text-align:center">:parent</td>
 <td style="text-align:center">选取包含子元素或者文本的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div:parent”)选取拥有子（元素）节点（包括文本元素）的&lt;div&gt;元素</td>
+<td style="text-align:center">$(“div:parent”)选取拥有子（元素）节点（包括文本元素）的\<div>元素</div></td>
 </tr>
 </tbody>
 </table>
@@ -606,9 +858,9 @@ a {
 <tbody>
 <tr>
 <td style="text-align:center">:hidden</td>
-<td style="text-align:center">选取所有不可见的元素，包括&lt;input type=”hidden”/&gt;,&lt;div style=”display:none;”&gt;和&lt;div style=”visibility:hidden;”&gt;等元素</td>
+<td style="text-align:center">选取所有不可见的元素，包括\<input type="hidden">,\<div style="display:none;>;和\<div style=" visibility:hidden;="">等元素</div></td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“p:hidden”)选取所有隐藏的&lt;p&gt;元素</td>
+<td style="text-align:center">$(“p:hidden”)选取所有隐藏的\<p>元素</p></td>
 </tr>
 <tr>
 <td style="text-align:center">:visible</td>
@@ -618,6 +870,9 @@ a {
 </tr>
 </tbody>
 </table>
+<ul>
+<li>jQuery至1.3.2之后的:hidden选择器仅匹配display:none或\<input type="hidden">的元素，而不匹配visibility: hidden或opacity:0的元素。这也意味着hidden只匹配那些“隐藏的”并且不占空间的元素，像visibility:hidden或 opactity:0的元素占据了空间，会被排除在外。</li>
+</ul>
 <h4 id="（4）属性过滤选择器"><a href="#（4）属性过滤选择器" class="headerlink" title="（4）属性过滤选择器"></a>（4）属性过滤选择器</h4><pre><code>&lt;div title=&quot;test&quot;&gt;title为test的div元素①&lt;/div&gt;
 &lt;div title=&quot;test-attr&quot;&gt;title为test-attr的div元素②&lt;/div&gt;
 &lt;div title=&quot;testing&quot;&gt;title为testing的div元素③&lt;/div&gt;
@@ -643,49 +898,49 @@ a {
 <td style="text-align:center">[attribute=value]</td>
 <td style="text-align:center">选取属性值为value的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“a[href=’#’]”)选取所有 href 属性的值等于 “#” 的&lt;a&gt;元素</td>
+<td style="text-align:center">$(“a[href=’#’]”)选取所有 href 属性的值等于 “#” 的\<a>元素</a></td>
 </tr>
 <tr>
 <td style="text-align:center">[attribute!=value]</td>
 <td style="text-align:center">选取属性值不等于value的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div[title!=test]”)选取属性title不等于 “test” 的&lt;div&gt;元素（注意：没有属性title的&lt;div&gt;元素也会被选取）</td>
+<td style="text-align:center">$(“div[title!=test]”)选取属性title不等于 “test” 的\<div>元素（注意：没有属性title的\<div>元素也会被选取）</div></div></td>
 </tr>
 <tr>
 <td style="text-align:center">[attribute^=value]</td>
 <td style="text-align:center">选取属性值以value开始的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div[title^=test]”)选取属性title以”test”开始的&lt;div&gt;元素①②③④</td>
+<td style="text-align:center">$(“div[title^=test]”)选取属性title以”test”开始的\<div>元素①②③④</div></td>
 </tr>
 <tr>
 <td style="text-align:center">[attribute$=value]</td>
 <td style="text-align:center">选取属性值以value结束的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div[title$=test]”)选取属性title以”test”结束的&lt;div&gt;元素①⑤</td>
+<td style="text-align:center">$(“div[title$=test]”)选取属性title以”test”结束的\<div>元素①⑤</div></td>
 </tr>
 <tr>
 <td style="text-align:center">[attribute*=value]</td>
 <td style="text-align:center">选取属性值含有value的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div[title*=test]”)选取属性title含有”test”的&lt;div&gt;元素①②③④⑤</td>
+<td style="text-align:center">$(“div[title*=test]”)选取属性title含有”test”的\<div>元素①②③④⑤</div></td>
 </tr>
 <tr>
 <td style="text-align:center">[attribute&#124;=value]</td>
 <td style="text-align:center">选取属性值等于给定字符串或以该字符串为前缀（该字符串后跟一个连字符“-”）的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div[title&#124;=’test’]”)选取属性title等于”test”或以“test”为前缀的&lt;div&gt;元素①②</td>
+<td style="text-align:center">$(“div[title&#124;=’test’]”)选取属性title等于”test”或以“test”为前缀的\<div>元素①②</div></td>
 </tr>
 <tr>
 <td style="text-align:center">[attribute~=value]</td>
 <td style="text-align:center">选取属性用空格分隔的值中包含给定字符串的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div[title~=test]”)选取属性title用空格分隔的值中包含”test”的&lt;div&gt;元素④</td>
+<td style="text-align:center">$(“div[title~=test]”)选取属性title用空格分隔的值中包含”test”的\<div>元素④</div></td>
 </tr>
 <tr>
 <td style="text-align:center">[attribute1][attribute2][attributeN]</td>
 <td style="text-align:center">选取匹配所有属性选择器的元素</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“div[id][title$=test]”)选取拥有属性id，并且属性title以”test”结束的&lt;div&gt;元素</td>
+<td style="text-align:center">$(“div[id][title$=test]”)选取拥有属性id，并且属性title以”test”结束的\<div>元素</div></td>
 </tr>
 </tbody>
 </table>
@@ -724,7 +979,7 @@ a {
 <ul>
 <li>:eq(index)只匹配一个元素，而:nth-child将为每一个父元素匹配子元素，且前者index从0开始，后者从1开始；</li>
 <li>:first/:last只返回单个元素，而:first-child/:last-child将为每一个父元素匹配第一个/最后一个子元素；</li>
-<li>:nth-child(3n)能选取每个父元素下索引值是3的倍数的元素。</li>
+<li>nth-child的三种用法:<br>1)nth-child(x)，获取第x个子元素；<br>2) :nth-child(even)和:nth-child(odd)，从1开始，获取第偶数个元素或第奇数个元素；<br>3) :nth-child(xn+y)，x&gt;=0，y&gt;=0。例如x = 3, y = 0时就是3n，表示取第3n个元素（n&gt;=0）。实际上xn+y是上面两种的通项式。（当x=0,y&gt;=0时，等同于:nth- child(x)；当x=2,y=0时，等同于nth-child(even)；当x=2,y=1时，等同于:nth-child(odd)）。</li>
 </ul>
 <h4 id="（6）表单对象属性过滤选择器"><a href="#（6）表单对象属性过滤选择器" class="headerlink" title="（6）表单对象属性过滤选择器"></a>（6）表单对象属性过滤选择器</h4><table>
 <thead>
@@ -758,11 +1013,15 @@ a {
 <td style="text-align:center">:checked</td>
 <td style="text-align:center">选取所有被选中的元素（单选框，复选框）</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“input:checked”)选取所有被选中的&lt;input&gt;元素</td>
+<td style="text-align:center">$(“input:checked”)选取所有被选中的\<input>元素</td>
 </tr>
 </tbody>
 </table>
-<h3 id="4-表单选择器"><a href="#4-表单选择器" class="headerlink" title="4.表单选择器"></a>4.表单选择器</h3><table>
+<ul>
+<li>:enabled和:diabled的匹配范围包括input, select, textarea。</li>
+<li><h3 id="4-表单选择器"><a href="#4-表单选择器" class="headerlink" title="4.表单选择器"></a>4.表单选择器</h3></li>
+</ul>
+<table>
 <thead>
 <tr>
 <th style="text-align:center">选择器</th>
@@ -774,63 +1033,63 @@ a {
 <tbody>
 <tr>
 <td style="text-align:center">:input</td>
-<td style="text-align:center">选取所有的&lt;input&gt;、&lt;textarea&gt;、&lt;select&gt;和&lt;button&gt;元素</td>
+<td style="text-align:center">选取所有的\<input>、\<textarea>、\</textarea><select>和\</select><button>元素</button></td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:input”)选取所有&lt;input&gt;、&lt;textarea&gt;、&lt;select&gt;和&lt;button&gt;元素</td>
+<td style="text-align:center">$(“:input”)选取所有\<input>、\<textarea>、\</textarea><select>和\</select><button>元素</button></td>
 </tr>
 <tr>
 <td style="text-align:center">:text</td>
 <td style="text-align:center">选取所有的单行文本框</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:text”)选取所有 type=”text” 的 &lt;input&gt; 元素</td>
+<td style="text-align:center">$(“:text”)选取所有 type=”text” 的 \<input> 元素</td>
 </tr>
 <tr>
 <td style="text-align:center">:password</td>
 <td style="text-align:center">选取所有的密码框</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:password”)选取所有 type=”password” 的 &lt;input&gt; 元素</td>
+<td style="text-align:center">$(“:password”)选取所有 type=”password” 的 \<input> 元素</td>
 </tr>
 <tr>
 <td style="text-align:center">:radio</td>
 <td style="text-align:center">选取所有的单选框</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:radio”)选取所有 type=”radio” 的 &lt;input&gt; 元素</td>
+<td style="text-align:center">$(“:radio”)选取所有 type=”radio” 的 \<input> 元素</td>
 </tr>
 <tr>
 <td style="text-align:center">:checkbox</td>
 <td style="text-align:center">选取所有的复选框</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:checkbox”)选取所有 type=”checkbox” 的 &lt;input&gt; 元素</td>
+<td style="text-align:center">$(“:checkbox”)选取所有 type=”checkbox” 的 \<input> 元素</td>
 </tr>
 <tr>
 <td style="text-align:center">:submit</td>
 <td style="text-align:center">选取所有的提交按钮</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:submit”)选取所有 type=”submit” 的 &lt;input&gt; 元素</td>
+<td style="text-align:center">$(“:submit”)选取所有 type=”submit” 的 \<input> 元素</td>
 </tr>
 <tr>
 <td style="text-align:center">:reset</td>
 <td style="text-align:center">选取所有的重置按钮</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:reset”)选取所有 type=”reset” 的 &lt;input&gt; 元素</td>
+<td style="text-align:center">$(“:reset”)选取所有 type=”reset” 的 \<input> 元素</td>
 </tr>
 <tr>
 <td style="text-align:center">:button</td>
 <td style="text-align:center">选取所有的按钮</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:button”)选取所有 type=”button” 的 &lt;input&gt; 元素</td>
+<td style="text-align:center">$(“:button”)选取所有 type=”button” 的 \<input> 元素</td>
 </tr>
 <tr>
 <td style="text-align:center">:image</td>
 <td style="text-align:center">选取所有的图像按钮</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:image”)选取所有 type=”image” 的 &lt;input&gt; 元素</td>
+<td style="text-align:center">$(“:image”)选取所有 type=”image” 的 \<input> 元素</td>
 </tr>
 <tr>
 <td style="text-align:center">:file</td>
 <td style="text-align:center">选取所有的上传域</td>
 <td style="text-align:center">集合元素</td>
-<td style="text-align:center">$(“:file”)选取所有 type=”file” 的 &lt;input&gt; 元素</td>
+<td style="text-align:center">$(“:file”)选取所有 type=”file” 的 \<input> 元素</td>
 </tr>
 </tbody>
 </table>
@@ -883,7 +1142,7 @@ a {
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="blog of TangYan">
     </span>
 
     
@@ -911,9 +1170,9 @@ a {
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-13T22:31:21+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-13T22:31:21+08:00">
                 2017-01-13
               </time>
             
@@ -1036,8 +1295,8 @@ a {
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -1091,11 +1350,11 @@ a {
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
