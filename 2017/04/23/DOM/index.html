@@ -107,7 +107,7 @@
     &amp;lt;title&amp;gt;Shopping list&amp;lt;/title&amp;gt;
 &amp;lt;/head&amp;gt;
 &amp;lt;b">
-<meta property="og:updated_time" content="2017-04-23T12:54:01.009Z">
+<meta property="og:updated_time" content="2017-04-23T13:48:02.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM">
 <meta name="twitter:description" content="节点表示网络中的一个连接点，每个节点都是一个对象
@@ -361,8 +361,9 @@
 &lt;/html&gt;
 </code></pre><h3 id="一、元素节点（element-node）–DOM的原子"><a href="#一、元素节点（element-node）–DOM的原子" class="headerlink" title="一、元素节点（element node）–DOM的原子"></a>一、元素节点（element node）–DOM的原子</h3><ol>
 <li>标签的名字就是元素的名字</li>
-<li><code>&lt;html&gt;</code>元素是唯一没有被包含在其他元素里的元素，是节点树的根元素<h3 id="二、文本节点（text-node）–包含文本的节点"><a href="#二、文本节点（text-node）–包含文本的节点" class="headerlink" title="二、文本节点（text node）–包含文本的节点"></a>二、文本节点（text node）–包含文本的节点</h3>在XHTML文档里，文本节点总是被包含在元素节点的内部<h3 id="三、属性节点（attribute-node）–用于对元素做出更具体的描述"><a href="#三、属性节点（attribute-node）–用于对元素做出更具体的描述" class="headerlink" title="三、属性节点（attribute node）–用于对元素做出更具体的描述"></a>三、属性节点（attribute node）–用于对元素做出更具体的描述</h3>属性节点总是被包含在元素节点中<br><code>&lt;p title=&quot;a gentle remainder&quot;&gt;Don&#39;t forget to buy this stuff.&lt;/p&gt;</code>中<br><code>&lt;p&gt;</code>是元素节点，<code>Don&#39;t forget to buy this stuff.</code>是文本节点，<code>title=&quot;a gentle remainder&quot;</code>是属性节点<h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><h3 id="一、getElementById"><a href="#一、getElementById" class="headerlink" title="一、getElementById"></a>一、getElementById</h3>返回一个有着与给定id属性值的元素节点对应的对象</li>
+<li><code>&lt;html&gt;</code>元素是唯一没有被包含在其他元素里的元素，是节点树的根元素<h3 id="二、文本节点（text-node）–包含文本的节点"><a href="#二、文本节点（text-node）–包含文本的节点" class="headerlink" title="二、文本节点（text node）–包含文本的节点"></a>二、文本节点（text node）–包含文本的节点</h3>在XHTML文档里，文本节点总是被包含在元素节点的内部<h3 id="三、属性节点（attribute-node）–用于对元素做出更具体的描述"><a href="#三、属性节点（attribute-node）–用于对元素做出更具体的描述" class="headerlink" title="三、属性节点（attribute node）–用于对元素做出更具体的描述"></a>三、属性节点（attribute node）–用于对元素做出更具体的描述</h3>属性节点总是被包含在元素节点中<br><code>&lt;p title=&quot;a gentle remainder&quot;&gt;Don&#39;t forget to buy this stuff.&lt;/p&gt;</code>中<br><code>&lt;p&gt;</code>是元素节点，<code>Don&#39;t forget to buy this stuff.</code>是文本节点，<code>title=&quot;a gentle remainder&quot;</code>是属性节点</li>
 </ol>
+<h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><h3 id="一、getElementById"><a href="#一、getElementById" class="headerlink" title="一、getElementById"></a>一、getElementById</h3><p>返回一个有着与给定id属性值的元素节点对应的对象</p>
 <ul>
 <li>语法：<code>document.getElementById(&quot;id&quot;)//单引号或双引号都可以</code></li>
 <li><p>例子：<code>document.getElementById(&quot;purchases&quot;)</code></p>
@@ -514,6 +515,10 @@ alert(body_element.nodeType);`
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/04/23/markdown语法/" rel="prev" title="markdown语法">
+                markdown语法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -584,7 +589,7 @@ alert(body_element.nodeType);`
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
