@@ -126,8 +126,8 @@
 var req = new XMLHttpRequest();
 req.open('GET', document.location, false);
 req.send(null);
-var headers = req.getAllResponseHeaders().toLowerCase();
-alert(headers);
+var headers = req.getAllResponseHeaders();
+console.log(headers);
     //Document对象数据
     if(document) {
         params.domain = document.domain || ''; 
