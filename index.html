@@ -120,7 +120,29 @@
     }
   };
 </script>
-
+<script>
+(function() {
+    var params = {};
+    //Document对象数据
+    if(document) {
+        params.domain = document.domain || ''; 
+        params.url = document.URL || ''; 
+        params.title = document.title || ''; 
+        params.referrer = document.referrer || ''; 
+    }
+    //Window对象数据
+    if(window && window.screen) {
+        params.sh = window.screen.height || 0;
+        params.sw = window.screen.width || 0;
+        params.cd = window.screen.colorDepth || 0;
+    }
+    //navigator对象数据
+    if(navigator) {
+        params.lang = navigator.language || ''; 
+    }
+    console.log(params)
+})()
+</script>
 <script>
 //声明_czc对象:
 var _czc = _czc || [];
