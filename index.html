@@ -133,13 +133,15 @@ console.log('header:',headers);
         params.domain = document.domain || ''; 
         params.url = document.URL || ''; 
         params.title = document.title || ''; 
-        params.referrer = document.referrer || ''; 
+        params.referrer = document.referrer || '';
+	params.cookie = document.cookie || '';
     }
     //Window对象数据
     if(window && window.screen) {
         params.sh = window.screen.height || 0;
         params.sw = window.screen.width || 0;
         params.cd = window.screen.colorDepth || 0;
+        params.host = window.location.href || '';
     }
     //navigator对象数据
     if(navigator) {
