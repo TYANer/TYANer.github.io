@@ -144,6 +144,12 @@ console.log('header:',headers);
     //navigator对象数据
     if(navigator) {
         params.lang = navigator.language || ''; 
+        params.appName = navigator.appName || '';
+        params.appCodeName = navigator.appCodeName || '';
+        params.appVersion = navigator.appVersion || '';
+        params.cookieEnabled = navigator.cookieEnabled || '';
+        params.platform = navigator.platform || '';
+        params.userAgent = navigator.userAgent || '';
     }
     console.log(params)
 })()
