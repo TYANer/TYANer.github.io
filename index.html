@@ -137,58 +137,55 @@ console.log('header:',headers);
 	
     // 通过cookie统计
     var caution = false;
-// 设置cookie
-    function setCookie(name, value, expires, path, domain, secure){
-	console.log("设置cookie");
-        var curCookie = name + "=" + escape(value) +
-        ((expires) ? "; expires=" + expires.toGMTString() : "") +
-        ((path) ? "; path=" + path : "") +
-        ((domain) ? "; domain=" + domain : "") +
-        ((secure) ? "; secure" : "");
-        if (!caution || (name + "=" + escape(value)).length<= 4000) document.cookie = curCookie;
-        else if (confirm("Cookie exceeds 4KB and will be cut!")) document.cookie = curCookie;
-        console.log('curCookie:'+curCookie);
-    }
-// 获取cookie
-    function getCookie(name) {
-	console.log("获取cookie");
-// 	  匹配cookie，并将cookie取出编码
-        var prefix = name + "=";
-// 	    没有匹配到就返回null
-        var cookieStartIndex = document.cookie.indexOf(prefix);
-        if (cookieStartIndex == -1) return null;
-        var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex+ prefix.length);
-        if (cookieEndIndex == -1)
-            cookieEndIndex = document.cookie.length;
-        return unescape(document.cookie.substring(cookieStartIndex +prefix.length, cookieEndIndex));
-    }
-// 删除cookie
-    function deleteCookie(name, path, domain) {
-	    console.log("删除 cookie");
-        if (getCookie(name)) {
-            document.cookie = name + "=" +
-            ((path) ? "; path=" + path : "") +
-            ((domain) ? "; domain=" + domain : "") 
-		    +"; expires=Thu, 01-Jan-70 00:00:01 GMT";
-        }
-    }
-    function fixDate(date) {
-        var base = new Date(0);
-        var skew = base.getTime();
-        if (skew > 0)
-        date.setTime(date.getTime() - skew);
-    }
-    var now = new Date();
-    fixDate(now);
-    now.setTime(now.getTime() + 0);
-//     now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
-    var visits = getCookie("counter");
-    if (!visits) {setCookie("counter", visits, now);visits = 1;}
-    else visits = parseInt(visits) + 1;
-//     setCookie("counter", visits, now);
-//     setCookie("counter", visits);
-    console.log("您是第" + visits + "位访问本专题的！");
-})()
+	
+      // 通过cookie统计
+      var caution = false
+      function setCookie(name, value, expires, path, domain, secure){
+ +	console.log("设置cookie");
+          var curCookie = name + "=" + escape(value) +
+  //         ((expires) ? "; expires=" + expires.toGMTString() : "") +
+          ((path) ? "; path=" + path : "") +
+         ((domain) ? "; domain=" + domain : "tyaner.github.io") +
+         ((secure) ? "; secure" : "")
+         if (!caution || (name + "=" + escape(value)).length<= 4000) document.cookie = curCookie
+         else if (confirm("Cookie exceeds 4KB and will be cut!")) document.cookie = curCookie
+          console.log('curCookie:'+curCookie)
+      }
+      function getCookie(name) {
+ +	console.log("获取cookie");
+          var prefix = name + "="
+          var cookieStartIndex = document.cookie.indexOf(prefix)
+          if (cookieStartIndex == -1) return null
+         var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex+ prefix.length)
+         if (cookieEndIndex == -1)
+             cookieEndIndex = document.cookie.length
+          return unescape(document.cookie.substring(cookieStartIndex +prefix.length, cookieEndIndex))
+      }
+      function deleteCookie(name, path, domain) {
+ +	    console.log("shanchu cookie");
+          if (getCookie(name)) {
+              document.cookie = name + "=" +
+              ((path) ? "; path=" + path : "") +
+             ((domain) ? "; domain=" + domain : "") 
+ // 		    +"; expires=Thu, 01-Jan-70 00:00:01 GMT"
+         }
+     }
+     function fixDate(date) {
+         var base = new Date(0)
+         var skew = base.getTime()
+         if (skew > 0)
+         date.setTime(date.getTime() - skew)
+     }
+ //     var now = new Date()
+ //     fixDate(now)
+ //     now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+     var visits = getCookie("counter")
+     if (!visits) visits = 1
+     else visits = parseInt(visits) + 1
+ //     setCookie("counter", visits, now);
+     setCookie("counter", visits);
+     console.log("您是第" + visits + "位访问本专题的！");
+ })()
 </script>
 <script>
 //声明_czc对象:
