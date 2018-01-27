@@ -138,7 +138,7 @@ console.log('header:',headers);
     var caution = false
     function setCookie(name, value, expires, path, domain, secure){
         var curCookie = name + "=" + escape(value) +
-        ((expires) ? "; expires=" + expires.toGMTString() : "") +
+//         ((expires) ? "; expires=" + expires.toGMTString() : "") +
         ((path) ? "; path=" + path : "") +
         ((domain) ? "; domain=" + domain : "") +
         ((secure) ? "; secure" : "")
@@ -159,8 +159,8 @@ console.log('header:',headers);
         if (getCookie(name)) {
             document.cookie = name + "=" +
             ((path) ? "; path=" + path : "") +
-            ((domain) ? "; domain=" + domain : "") +
-            "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+            ((domain) ? "; domain=" + domain : "") 
+// 		    +"; expires=Thu, 01-Jan-70 00:00:01 GMT"
         }
     }
     function fixDate(date) {
@@ -169,9 +169,9 @@ console.log('header:',headers);
         if (skew > 0)
         date.setTime(date.getTime() - skew)
     }
-    var now = new Date()
-    fixDate(now)
-    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+//     var now = new Date()
+//     fixDate(now)
+//     now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
     var visits = getCookie("counter")
     if (!visits) visits = 1
     else visits = parseInt(visits) + 1
