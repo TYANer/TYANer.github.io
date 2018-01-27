@@ -134,9 +134,11 @@ console.log('header:',headers);
     }
 //    document.getElementById("result1").innerHTML=localStorage.pagecount;
     console.log('count'+localStorage.pagecount);
+	
     // 通过cookie统计
     var caution = false
     function setCookie(name, value, expires, path, domain, secure){
+	console.log("设置cookie");
         var curCookie = name + "=" + escape(value) +
 //         ((expires) ? "; expires=" + expires.toGMTString() : "") +
         ((path) ? "; path=" + path : "") +
@@ -147,6 +149,7 @@ console.log('header:',headers);
         console.log('curCookie:'+curCookie)
     }
     function getCookie(name) {
+	console.log("获取cookie");
         var prefix = name + "="
         var cookieStartIndex = document.cookie.indexOf(prefix)
         if (cookieStartIndex == -1) return null
@@ -156,6 +159,7 @@ console.log('header:',headers);
         return unescape(document.cookie.substring(cookieStartIndex +prefix.length, cookieEndIndex))
     }
     function deleteCookie(name, path, domain) {
+	    console.log("shanchu cookie");
         if (getCookie(name)) {
             document.cookie = name + "=" +
             ((path) ? "; path=" + path : "") +
