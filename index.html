@@ -175,7 +175,8 @@ console.log('header:',headers);
     var visits = getCookie("counter")
     if (!visits) visits = 1
     else visits = parseInt(visits) + 1
-    setCookie("counter", visits, now);
+//     setCookie("counter", visits, now);
+    setCookie("counter", visits);
     console.log("您是第" + visits + "位访问本专题的！");
 })()
 </script>
