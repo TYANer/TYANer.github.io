@@ -53,16 +53,19 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
-// 生成script标签，请求js代码
-(function() {
-  var ma = document.createElement('script'); ma.type = 'text/javascript'; ma.async = true;
-  ma.src = 'http://otdavxws8.bkt.clouddn.com/magic-count.bundle.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ma, s);
-})();
+</script>
+
+<script type="text/javascript">
+  // 生成script标签，请求js代码
+  (function() {
+    var ma = document.createElement('script'); ma.type = 'text/javascript'; ma.async = true;
+    ma.src = 'http://otdavxws8.bkt.clouddn.com/magic-count.bundle.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ma, s);
+  })();
 </script>
 <!-- <script src="https://pv.sohu.com/cityjson?ie=utf-8">// 搜狐获取IP接口</script> -->
 
-<script>
+<!-- <script>
 (function() {
 var params = {};
 var req = new XMLHttpRequest();
@@ -162,7 +165,7 @@ console.log('header:',headers);
      setCookie("counter", visits);
      console.log("您是第" + visits + "位访问本专题的！");
  })()
-</script>
+</script> -->
 <!-- <script>
 //声明_czc对象:
 var _czc = _czc || [];
@@ -251,7 +254,6 @@ _czc.push(["_setAccount", "1271385144"]);
           </a>
         </li>
       
-
       
     </ul>
   
@@ -272,12 +274,6 @@ _czc.push(["_setAccount", "1271385144"]);
   <section id="posts" class="posts-expand">
     
       
-
-  
-
-  
-  
-  
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/markdown语法/">
@@ -331,19 +327,6 @@ _czc.push(["_setAccount", "1271385144"]);
 
           
 
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
       </header>
     
@@ -352,10 +335,6 @@ _czc.push(["_setAccount", "1271385144"]);
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           
             <h3 id="标题篇"><a href="#标题篇" class="headerlink" title="标题篇"></a>标题篇</h3><h4 id="类-Setext-形式"><a href="#类-Setext-形式" class="headerlink" title="类 Setext 形式"></a>类 Setext 形式</h4><p>用底线的形式，利用 = （最高阶标题）和 - （第二阶标题）</p>
 <pre><code>This is an H1
@@ -474,10 +453,6 @@ This is an H2
       
 
       
-
-      
-
-      
       
         <div class="post-eof"></div>
       
@@ -485,14 +460,6 @@ This is an H2
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/DOM/">
@@ -545,18 +512,6 @@ This is an H2
           </span>
 
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
           
 
         </div>
@@ -567,10 +522,6 @@ This is an H2
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
           
             <h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><p>表示网络中的一个连接点，每个节点都是一个对象</p>
 <pre><code>&lt;!DOCTYPE html&gt;
@@ -796,16 +747,6 @@ alert(body_element.nodeType);`
 
           
 
-          
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 

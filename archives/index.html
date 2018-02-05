@@ -119,15 +119,17 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
-// 生成script标签，请求js代码
-(function() {
-  var ma = document.createElement('script'); ma.type = 'text/javascript'; ma.async = true;
-  ma.src = 'http://otdavxws8.bkt.clouddn.com/magic-count.bundle.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ma, s);
-})();
 </script>
 
 
+<script type="text/javascript">
+  // 生成script标签，请求js代码
+  (function() {
+    var ma = document.createElement('script'); ma.type = 'text/javascript'; ma.async = true;
+    ma.src = 'http://otdavxws8.bkt.clouddn.com/magic-count.bundle.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ma, s);
+  })();
+</script>
 
   <link rel="canonical" href="http://yoursite.com/archives/"/>
 
