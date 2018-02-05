@@ -1,35 +1,18 @@
 <!doctype html>
 
-
-
-  
-
-
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
-
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-  
-  
+ 
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-    
-    
-    
+ 
     <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
+ 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
@@ -37,19 +20,7 @@
 
   <meta name="keywords" content="Hexo, NexT" />
 
-
-
-
-
-
-
-
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
-
-
 
 <meta name="description" content="欲戴王冠，必承其重！">
 <meta property="og:type" content="website">
@@ -61,8 +32,6 @@
 <meta name="twitter:title" content="blog of TangYan">
 <meta name="twitter:description" content="欲戴王冠，必承其重！">
 
-
-        <script src="http://otdavxws8.bkt.clouddn.com/magic-count.bundle.js"></script>
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
@@ -84,8 +53,14 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
+// 生成script标签，请求js代码
+(function() {
+  var ma = document.createElement('script'); ma.type = 'text/javascript'; ma.async = true;
+  ma.src = 'http://otdavxws8.bkt.clouddn.com/magic-count.bundle.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ma, s);
+})();
 </script>
-<script src="https://pv.sohu.com/cityjson?ie=utf-8">// 搜狐获取IP接口</script>
+<!-- <script src="https://pv.sohu.com/cityjson?ie=utf-8">// 搜狐获取IP接口</script> -->
 
 <script>
 (function() {
@@ -188,16 +163,14 @@ console.log('header:',headers);
      console.log("您是第" + visits + "位访问本专题的！");
  })()
 </script>
-<script>
+<!-- <script>
 //声明_czc对象:
 var _czc = _czc || [];
 //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
 _czc.push(["_setAccount", "1271385144"]);
-</script>
+</script> -->
 
   <link rel="canonical" href="http://yoursite.com/"/>
-
-
 
 
 
@@ -209,21 +182,6 @@ _czc.push(["_setAccount", "1271385144"]);
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
   
 
   <div class="container one-collumn sidebar-position-left 
